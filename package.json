@@ -1,0 +1,28 @@
+{
+    "name": "tg-sql-lock-watcher",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder"
+    },
+    "build": {
+        "appId": "com.tg-sql-lock-watcher-app",
+        "productName": "資料庫鎖定查詢小工具",
+        "asar": true,
+        "files": [
+            "**/*"
+        ],
+        "directories": {
+            "output": "dist"
+        }
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "mssql": "^11.0.1"
+    },
+    "devDependencies": {
+        "electron": "^20.3.10",
+        "electron-builder": "^23.6.0"
+    }
+}

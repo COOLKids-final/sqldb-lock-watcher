@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>資料庫鎖定查詢小工具</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<div id="loading-mask" class="hidden">
+    <div class="spinner"></div>
+</div>
+
+<body>
+    <header>
+        <h1>資料庫連線設定</h1>
+    </header>
+
+    <main>
+        <form id="connection-form">
+            <div class="form-group">
+                <!-- <label for="server">
+                    <i class="fas fa-server"></i> Server IP 或名稱:
+                    <input type="text" id="server" required>
+                </label> -->
+                <label for="server-ip-port">
+                    <i class="fas fa-server"></i>Server IP 或名稱, Port (選填):
+                    <input type="text" id="server-ip-port" name="server-ip-port" placeholder="例如: 200.20.20.20, 1403" required>
+                </label>
+            </div>
+            <!-- <div class="form-group">
+                <label for="port">
+                    <i class="fas fa-plug"></i> Port (選填):
+                    <input type="number" id="port">
+                </label>
+            </div> -->
+            <div class="form-group">
+                <label for="database">
+                    <i class="fas fa-database"></i> Database 名稱:
+                    <input type="text" id="database" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="instanceName">
+                    <i class="fas fa-cogs"></i> Instance Name (選填):
+                    <input type="text" id="instanceName">
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="userName">
+                    <i class="fas fa-user"></i> 帳號:
+                    <input type="text" id="userName" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="password">
+                    <i class="fas fa-key"></i> 密碼:
+                    <input type="password" id="password">
+                </label>
+            </div>
+            <div class="form-group">
+                <button type="button" id="connect-btn">連線</button>
+            </div>
+        </form>
+        <div id="snackbar"></div>
+    </main>
+
+    <footer>Powered by COOLKids</footer>
+
+    <script src="../src/renderer.js"></script>
+</body>
+
+</html>
